@@ -35,3 +35,6 @@ def index(request):
 
 def test(request):
     return HttpResponse("Test Page")
+
+def process(request):
+    return HttpResponse("Test Page")
