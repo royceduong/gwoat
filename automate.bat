@@ -1,4 +1,0 @@
-python sample.py
-
-
-PAUSE
