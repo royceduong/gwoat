@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import cv2
 import os
+from django.core.files.storage import FileSystemStorage
 
 def draw_on_faces(filepath): #path to image
 
@@ -30,11 +31,19 @@ def draw_on_faces(filepath): #path to image
     return new_file
 
 def index(request):
-    # return HttpResponse("Hello, world. You're at the polls index.")
+
+    if request.method == 'POST':
+
+        file = request.FILES['pic']
+        fs = FileSystemStorage()
+        filename = fs.save(file.name, file)
+
+        file_url = fs.path(filename)
+
+        print("File Received")
+        return HttpResponse("Test Page")
+
     return render(request, 'first_app/home.html')
 
 def test(request):
-    return HttpResponse("Test Page")
-
-def process(request):
     return HttpResponse("Test Page")
