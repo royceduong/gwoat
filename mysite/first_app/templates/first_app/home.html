@@ -1,1 +1,7 @@
-<h1> Welcome to home page</h1>
+<h1>File Upload</h1>
+<form action="process/" method="post">
+    {% csrf_token %}
+    <p>File Name: <input type="text" name="name"></p>
+    <input type="file" name="pic" accept="image/*">
+    <p><input type="submit" value="Submit Image"></p>
+</form>
