@@ -25,13 +25,17 @@ def draw_on_faces(filepath): #path to image
     for (x, y, w, h) in faces:
         cv2.rectangle(resized_img, (x, y), (x+w, y+h), (0, 255, 0), thickness=2)
 
-    new_file = "media/new_" + file + '.jpeg'
+    new_file =  "media/new_" + file + '.jpeg'
     cv2.imwrite(new_file, resized_img)
+
+    cwd = os.getcwd()
+
+    filepath = cwd + "\\" + new_file
     #cv2.imwrite('blabla.jpeg', resized_img)
 
     #cv2.waitKey(0)
 
-    return new_file
+    return filepath
 
 def index(request):
 
@@ -46,7 +50,8 @@ def index(request):
         new_file = draw_on_faces(file_url)
 
         print("File Received")
-        return HttpResponse("Test Page")
+        print (new_file)
+        return render(request, 'first_app/result.html', {'drawn_on_file': new_file})
 
     return render(request, 'first_app/home.html')
 
@@ -55,4 +60,3 @@ def test(request):
 
 def goats(request):
     return render(request, 'first_app/goats.html')
-    
