@@ -26,7 +26,7 @@ def draw_on_faces(filepath): #path to image
         cv2.rectangle(resized_img, (x, y), (x+w, y+h), (0, 255, 0), thickness=2)
 
     new_file =  "new_" + file + '.jpg'
-    cv2.imwrite("media\\" + new_file, resized_img)
+    cv2.imwrite("media/" + new_file, resized_img)
 
     #cv2.imwrite('blabla.jpeg', resized_img)
 
@@ -58,6 +58,6 @@ def test(request):
 def goats(request):
     context = {
         'photos' : 12,
-        'stuff' : [1,2,3,4,5]
+        'stuff' : [1,2,3,4,5,6,7,8,9,10,11,12]
     }
     return render(request, 'first_app/goats.html', context)
