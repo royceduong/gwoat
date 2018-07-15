@@ -54,5 +54,9 @@ def test(request):
     return HttpResponse("Test Page")
 
 def goats(request):
-    return render(request, 'first_app/goats.html')
+    context = { 
+        'photos' : 12, 
+        'stuff' : [1,2,3,4,5]
+    }
+    return render(request, 'first_app/goats.html', context)
     
