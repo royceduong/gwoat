@@ -47,3 +47,7 @@ def index(request):
 
 def test(request):
     return HttpResponse("Test Page")
+
+def goats(request):
+    return render(request, 'first_app/goats.html')
+    
