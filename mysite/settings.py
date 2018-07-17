@@ -126,8 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-print("GETTING HERE")
-
+print("OS CWD: " + os.getcwd())
 if os.getcwd() == '/app':
     import dj_database_url
     DATABASES = {
