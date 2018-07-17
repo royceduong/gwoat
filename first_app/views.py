@@ -24,6 +24,8 @@ def draw_on_faces(filepath): #path to image
     classifier = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml') #open opencv model
     faces = classifier.detectMultiScale(img_copy, scaleFactor=1.1, minNeighbors=5) #detect faces
 
+    print("Number of Faces: " + str(len(faces)))
+
     for (x, y, w, h) in faces: #loop over all faces
         w_scaled = int(w * GOAT_SCALE_FACTOR) #opencv returns a rectangle around face. Going to need to enlarge goat picture to cover all of it
         h_scaled = int(h * GOAT_SCALE_FACTOR)
