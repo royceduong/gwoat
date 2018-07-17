@@ -147,4 +147,4 @@ if os.getcwd() == '/app':
     )
 
     MEDIA_ROOT = 'media'
-    MEDIA_URL = '/media'
+    MEDIA_URL = '/media/'
