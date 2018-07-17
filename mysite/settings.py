@@ -28,6 +28,8 @@ SECRET_KEY = 'lyw!15sy%a3$lbt^b+xhf9*88mtpk)d4)4xou(9p$a56!&ay+u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+print("DEBUG is " + DEBUG)
+
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
 
