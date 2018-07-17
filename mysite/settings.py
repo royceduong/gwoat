@@ -31,6 +31,9 @@ DEBUG = False
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
 
+print("MEDIA_ROOT: " + MEDIA_ROOT)
+print("MEDIA_URL: " + MEDIA_URL)
+
 
 # Application definition
 
