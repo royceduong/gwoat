@@ -126,6 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+print("GETTING HERE")
 
 if os.getcwd() == '/app':
     import dj_database_url
@@ -141,6 +142,8 @@ if os.getcwd() == '/app':
 
     #Static asset Configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    print("GETTING TO STATIC_ROOT")
     STATIC_ROOT = 'staticfiles'
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
