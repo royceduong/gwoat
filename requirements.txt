@@ -12,3 +12,4 @@ dj_static==0.0.6
 static3==0.7.0
 dj-database-url==0.5.0
 psycopg2==2.7.5
+opencv-python==3.4.1.15
